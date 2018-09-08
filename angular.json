@@ -121,6 +121,46 @@
           }
         }
       }
+    },
+    "ng-mensajero": {
+      "root": "projects/ng-mensajero",
+      "sourceRoot": "projects/ng-mensajero/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-mensajero/tsconfig.lib.json",
+            "project": "projects/ng-mensajero/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ng-mensajero/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-mensajero/src/test.ts",
+            "tsConfig": "projects/ng-mensajero/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-mensajero/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-mensajero/tsconfig.lib.json",
+              "projects/ng-mensajero/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "npm-ng-mensajero"

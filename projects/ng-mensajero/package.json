@@ -1,0 +1,16 @@
+{
+  "name": "ng-mensajero",
+  "version": "1.0.1",
+  "author": "mariogl",
+  "license": "ISC",
+  "keywords": [
+    "angular",
+    "observable",
+    "rxjs"
+  ],
+  "description": "Servicio para Angular 6+ que funciona como proveedor de mensajes para la comunicación entre componentes y servicios. Utiliza un BehaviorSubject con dos métodos públicos, uno para emitir mensajes y otro para suscribirse y escucharlos.",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  }
+}
